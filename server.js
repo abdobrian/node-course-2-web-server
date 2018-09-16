@@ -47,7 +47,14 @@ app.get('/about', (request,response)=>{
     pageTitle: 'About Page'
   });
 });
+app.get('/projects', (request,response)=>{
 
+//response.send('<h1>Hello Express</h1>');
+response.render('projects.hbs',{
+  pageTitle: 'Projects Page',
+  ProjectMessage: 'Project Page Message'
+});
+});
 app.get('/bad', (request,response)=>{
   response.send({
   ErrorMessage: "Unable To Complete Request"
